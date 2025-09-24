@@ -1,0 +1,39 @@
+.parent {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+.card:hover {
+    border: 5px solid #d41121;
+    /* box-shadow: 10px 10px grey; */
+}
+
+.image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.Name {
+  font-weight: bold;
+  color: #333;
+}
+
+.color {
+  color: #e63946;
+}
+
