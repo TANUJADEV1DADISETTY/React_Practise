@@ -36,34 +36,34 @@ const CardsDynamic = () => {
 ]);
 
 const [QueryResult, setQueryResult] = useState([
-    // {
-    //     "name" : "Alice",
-    //     "Roll_No" : "23P31A4201"
-    // },
-    // {
-    //     "name" : "Bob",
-    //     "Roll_No" : "23A91A4208"
-    // },
-    // {
-    //     "name" : "Charlie",
-    //     "Roll_No" : "23P31A4202"
-    // },
-    // {
-    //     "name" : "David",
-    //     "Roll_No" : "23MH1A4205"
-    // },
-    // {
-    //     "name" : "Emma",
-    //     "Roll_No" : "23MH1A4215"
-    // },
-    // {
-    //     "name" : "Ferrik",
-    //     "Roll_No" : "23P31A4210"
-    // },
-    // {
-    //     "name" : "Tanuja",
-    //     "Roll_No" : "23P31A4215"
-    // }
+    {
+        "name" : "Alice",
+        "Roll_No" : "23P31A4201"
+    },
+    {
+        "name" : "Bob",
+        "Roll_No" : "23A91A4208"
+    },
+    {
+        "name" : "Charlie",
+        "Roll_No" : "23P31A4202"
+    },
+    {
+        "name" : "David",
+        "Roll_No" : "23MH1A4205"
+    },
+    {
+        "name" : "Emma",
+        "Roll_No" : "23MH1A4215"
+    },
+    {
+        "name" : "Ferrik",
+        "Roll_No" : "23P31A4210"
+    },
+    {
+        "name" : "Tanuja",
+        "Roll_No" : "23P31A4215"
+    }
 ]);
     const [UserSearch, setUserSearch] = useState("");
 
