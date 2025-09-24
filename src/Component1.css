@@ -1,0 +1,18 @@
+.parent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+.bg-pink {
+    background-color: pink;
+}
+.bg-skyblue {
+    background-color: skyblue;
+}
