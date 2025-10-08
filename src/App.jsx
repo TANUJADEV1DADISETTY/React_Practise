@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css'
 // import FunctionComponent from "./FunctionComponent"
 // import MyComponent from './MyComponent'
 // import FormComponent1 from './FormComponent1'
@@ -14,7 +14,10 @@ import viteLogo from '/vite.svg'
 // import Component1 from './Component1'
 // import Component2 from './component2'
 // import UseeffComponent from './UseeffComponent'
-import CardsDynamic from './CardsDynamic'
+// import CardsDynamic from './CardsDynamic'
+// import Todo from '../todo'
+// import ImageComponent from '../ImageComponent'
+import ImageComponent1 from './ImageComponent1'
 
   // const Myimage =
     // "https://images.pexels.com/photos/39803/pexels-photo-39803.jpeg?cs=srgb&dl=food-healthy-apple-39803.jpg&fm=jpg";
@@ -88,9 +91,13 @@ import CardsDynamic from './CardsDynamic'
 }
  
       {/* <UseeffComponent/> */}
-      <CardsDynamic/>
+      {/* <CardsDynamic/> */}
+      {/* <Todo/> */}
+      <ImageComponent1 />
     </>
   )
 };
 
 export default App
+
+
