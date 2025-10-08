@@ -11,7 +11,8 @@ const ImageComponent1 = () => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onload= () =>{
-      setImagePath(reader.result)
+    //   setImagePath(reader.result)
+        console.log(reader.result)
     }
   }
 
