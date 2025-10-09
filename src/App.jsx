@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
 // import FunctionComponent from "./FunctionComponent"
 // import MyComponent from './MyComponent'
 // import FormComponent1 from './FormComponent1'
@@ -17,7 +17,9 @@ import './App.css'
 // import CardsDynamic from './CardsDynamic'
 // import Todo from '../todo'
 // import ImageComponent from '../ImageComponent'
-import ImageComponent1 from './ImageComponent1'
+// import ImageComponent1 from './ImageComponent1'
+// import HeaderComponent from './HeaderComponent'
+import AddData from './AddData'
 
   // const Myimage =
     // "https://images.pexels.com/photos/39803/pexels-photo-39803.jpeg?cs=srgb&dl=food-healthy-apple-39803.jpg&fm=jpg";
@@ -93,7 +95,9 @@ import ImageComponent1 from './ImageComponent1'
       {/* <UseeffComponent/> */}
       {/* <CardsDynamic/> */}
       {/* <Todo/> */}
-      <ImageComponent1 />
+      {/* <ImageComponent1 /> */}
+      {/* <HeaderComponent /> */}
+      <AddData />
     </>
   )
 };
