@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+
 // import './App.css'
 // import FunctionComponent from "./FunctionComponent"
 // import MyComponent from './MyComponent'
@@ -19,7 +20,10 @@ import viteLogo from '/vite.svg'
 // import ImageComponent from '../ImageComponent'
 // import ImageComponent1 from './ImageComponent1'
 // import HeaderComponent from './HeaderComponent'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddData from './AddData'
+import HeaderComponent from './HeaderComponent';
 
   // const Myimage =
     // "https://images.pexels.com/photos/39803/pexels-photo-39803.jpeg?cs=srgb&dl=food-healthy-apple-39803.jpg&fm=jpg";
@@ -63,7 +67,7 @@ import AddData from './AddData'
   // const Delete=(deleteIndex)=>{
     // var arr=Data.filter((ele,index)=> index !== deleteIndex)
     // setData(arr)
-    
+   //}
 
     // console.log(deleteIndex)
 
@@ -90,14 +94,21 @@ import AddData from './AddData'
         // Data.map(ele=>{
           // return <h1>{ele}</h1>
         // }) 
-}
+      }
  
       {/* <UseeffComponent/> */}
       {/* <CardsDynamic/> */}
       {/* <Todo/> */}
       {/* <ImageComponent1 /> */}
       {/* <HeaderComponent /> */}
-      <AddData />
+      {/* <AddData /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path = "/" element = {<HeaderComponent/>} />
+          <Route path = "/addData" element = {<AddData />} />
+        </Routes>
+      </BrowserRouter>
+      
     </>
   )
 };
