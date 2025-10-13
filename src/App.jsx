@@ -135,6 +135,7 @@ import Counter from "./CountUp";
 import Tilt from "./Tilt";
 import Toast from "./Toast";
 import Spinner from "./Spinner";
+import Confit from "./Confit";
 
 const App = () => {
   return (
@@ -155,7 +156,8 @@ const App = () => {
     // <Counter />  
     // <Tilt />
     // <Toast />
-    <Spinner />
+    // <Spinner />
+    <Confit />
   );
 };
 
