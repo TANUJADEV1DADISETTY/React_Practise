@@ -131,6 +131,7 @@ import AddData from "./AddData";
 import ViewData from "./ViewData";
 import { ProductProvider } from "./ProductContext";
 import Counter from "./CountUp";
+import Tilt from "./Tilt";
 
 const App = () => {
   return (
@@ -147,7 +148,8 @@ const App = () => {
     // </Router>
 
     // For now, just showing your Counter
-    <Counter />  // ✅ Works properly now
+    // <Counter />  
+    <Tilt />
   );
 };
 
