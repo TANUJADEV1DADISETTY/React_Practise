@@ -1,54 +1,128 @@
-import React from "react";
-import './AddData.css'
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import "./AddData.css";
+import { ProductContext } from "./ProductContext";
 
 const AddData = () => {
-    
-     return(
-        <div className="form-container">
+  const { products, setProducts } = useContext(ProductContext);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    brand: "",
+    size: "",
+    price: "",
+    image: "",
+    desc: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value, files } = e.target;
+    setFormData({
+      ...formData,
+      [id]: id === "image" ? files[0] : value,
+    });
+  };
+
+  const SubmitForm = () => {
+    if (!formData.name || !formData.brand || !formData.price || !formData.image) {
+      alert("Please fill all required fields!");
+      return;
+    }
+
+    const newProduct = {
+      ...formData,
+      imageUrl: URL.createObjectURL(formData.image), // for preview
+    };
+
+    setProducts([...products, newProduct]); // add product globally
+
+    alert("Product added successfully!");
+    setFormData({
+      name: "",
+      brand: "",
+      size: "",
+      price: "",
+      image: "",
+      desc: "",
+    });
+  };
+
+  const ClearForm = () => {
+    setFormData({
+      name: "",
+      brand: "",
+      size: "",
+      price: "",
+      image: "",
+      desc: "",
+    });
+  };
+
+  function Change() {
+    window.location.href = "/viewdata";
+  }
+
+  return (
+    <div className="form-container">
       <h1>Add the data of Products</h1>
 
       <label>Name:</label>
-      <input id="name" type="text" placeholder="Enter the name of product" />
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter the name of product"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
 
       <label>Brand:</label>
-      <input id="brand" type="text" placeholder="Enter the brand of product" />
+      <input
+        id="brand"
+        type="text"
+        placeholder="Enter the brand of product"
+        value={formData.brand}
+        onChange={handleChange}
+        required
+      />
 
-      <label>size:</label>
-      <input id="size" type="text" placeholder="Enter the size of product" />
+      <label>Size:</label>
+      <input
+        id="size"
+        type="text"
+        placeholder="Enter the size of product"
+        value={formData.size}
+        onChange={handleChange}
+        required
+      />
 
-      <label>price:</label>
-      <input id="price" type="text" placeholder="Enter the price of product" />
-
+      <label>Price:</label>
+      <input
+        id="price"
+        type="text"
+        placeholder="Enter the price of product"
+        value={formData.price}
+        onChange={handleChange}
+        required
+      />
 
       <label>Choose Image:</label>
-      <input id="image" type="file"/>
+      <input id="image" type="file" onChange={handleChange} required />
 
-      <label>Description</label>
-      <textarea id = "desc"></textarea><br></br><br></br>
+      <label>Description:</label>
+      <textarea
+        id="desc"
+        placeholder="Enter the description"
+        value={formData.desc}
+        onChange={handleChange}
+      ></textarea>
 
-      <input
-        type="submit"
-        onClick={() => {
-          const name = document.getElementById("name").value;
-          const brand = document.getElementById("brand").value;
-          const size = document.getElementById("size").value;
-          const price = document.getElementById("price").value;
-          const image = document.getElementById("image").value;
-          const desc = document.getElementById("desc").value;
-
-          console.log("Form Submitted:");
-          console.log("Name:", name);
-          console.log("Brand:", brand);
-          console.log("Size:", size);
-          console.log("Price:", price);
-          console.log("Image:", image);
-          console.log("Description:", desc);
-        }}
-      >
-        Submit
-      </input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type = "reset"></input>
+      <br />
+      <br />
+      <button type="button" onClick={SubmitForm}>Submit</button>
+      &nbsp;&nbsp;&nbsp;
+      <button type="button" onClick={ClearForm}>Clear</button>
+      &nbsp;&nbsp;&nbsp;
+      <button type="button" onClick={Change}>View Data</button>
     </div>
   );
 };

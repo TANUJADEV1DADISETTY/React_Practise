@@ -1,6 +1,6 @@
 import React from "react";
 import './HeaderComponent.css'
-import { Link } from "react-router-dom";
+
 
 
 const HeaderComponent = () => {
@@ -8,8 +8,8 @@ const HeaderComponent = () => {
         <>
         <div className="parent">
             <div className="child">
-                <Link to = "/adddata"><div className="add">Add Data</div></Link>
-                <Link to = "/viewdata"><div className="view">View Data</div></Link>
+                <div className="add">Add Data</div>
+                <div className="view">View Data</div>
             </div>
         </div>
         </>
