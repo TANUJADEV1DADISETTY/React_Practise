@@ -98,7 +98,7 @@
 //           // return <h1>{ele}</h1>
 //         // }) 
 //       }
- 
+
 //       {/* <UseeffComponent/> */}
 //       {/* <CardsDynamic/> */}
 //       {/* <Todo/> */}
@@ -114,7 +114,7 @@
 //       </BrowserRouter>
 //       {/* <HeaderComponent /> */}
 //       {/* <AddData /> */}
-      
+
 //     </>
 //   )
 // };
@@ -130,19 +130,24 @@ import HeaderComponent from "./HeaderComponent";
 import AddData from "./AddData";
 import ViewData from "./ViewData";
 import { ProductProvider } from "./ProductContext";
+import Counter from "./CountUp";
 
 const App = () => {
   return (
-    <Router>
-      <ProductProvider>
-        {/* <HeaderComponent /> */}
-        <Routes>
-          <Route path = "/" element = {<HeaderComponent />}/>
-          <Route path="/adddata" element={<AddData />} />
-          <Route path="/viewdata" element={<ViewData />} />
-        </Routes>
-      </ProductProvider>
-    </Router>
+    // Uncomment this part when you want routing
+    // <Router>
+    //   <ProductProvider>
+    //     <HeaderComponent />
+    //     <Routes>
+    //       <Route path="/" element={<HeaderComponent />} />
+    //       <Route path="/adddata" element={<AddData />} />
+    //       <Route path="/viewdata" element={<ViewData />} />
+    //     </Routes>
+    //   </ProductProvider>
+    // </Router>
+
+    // For now, just showing your Counter
+    <Counter />  // ✅ Works properly now
   );
 };
 

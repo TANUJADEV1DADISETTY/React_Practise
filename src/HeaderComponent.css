@@ -22,3 +22,8 @@
     text-decoration-color: rgb(134, 193, 215);  
     color: navy;           
 }
+.view {
+    text-decoration: underline;
+    text-decoration-color: rgb(134, 193, 215);  
+    color: navy;           
+}
