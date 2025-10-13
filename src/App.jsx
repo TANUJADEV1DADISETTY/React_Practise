@@ -130,26 +130,32 @@ import HeaderComponent from "./HeaderComponent";
 import AddData from "./AddData";
 import ViewData from "./ViewData";
 import { ProductProvider } from "./ProductContext";
+import ViewDetails from "./ViewDetails";
 import Counter from "./CountUp";
 import Tilt from "./Tilt";
+import Toast from "./Toast";
+import Spinner from "./Spinner";
 
 const App = () => {
   return (
     // Uncomment this part when you want routing
     // <Router>
     //   <ProductProvider>
-    //     <HeaderComponent />
+        
     //     <Routes>
     //       <Route path="/" element={<HeaderComponent />} />
     //       <Route path="/adddata" element={<AddData />} />
     //       <Route path="/viewdata" element={<ViewData />} />
+    //       <Route path="/viewdata/:id" element={<ViewDetails />} />
     //     </Routes>
     //   </ProductProvider>
     // </Router>
 
     // For now, just showing your Counter
     // <Counter />  
-    <Tilt />
+    // <Tilt />
+    // <Toast />
+    <Spinner />
   );
 };
 
