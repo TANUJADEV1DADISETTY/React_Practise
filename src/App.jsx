@@ -136,6 +136,7 @@ import Tilt from "./Tilt";
 import Toast from "./Toast";
 import Spinner from "./Spinner";
 import Confit from "./Confit";
+import Dashboard from "./Dashboard";
 
 const App = () => {
   return (
@@ -157,7 +158,8 @@ const App = () => {
     // <Tilt />
     // <Toast />
     // <Spinner />
-    <Confit />
+    // <Confit />
+    <Dashboard />
   );
 };
 

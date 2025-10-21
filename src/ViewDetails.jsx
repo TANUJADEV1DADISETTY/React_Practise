@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ProductContext } from "./ProductContext";
-import "./ViewData.css";
+import "./ViewDetails.css";
 
 const ViewDetails = () => {
   const { id } = useParams();
