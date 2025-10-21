@@ -137,6 +137,7 @@ import Toast from "./Toast";
 import Spinner from "./Spinner";
 import Confit from "./Confit";
 import Dashboard from "./Dashboard";
+import Dashboard1 from "./Dashboard1";
 
 const App = () => {
   return (
@@ -159,7 +160,17 @@ const App = () => {
     // <Toast />
     // <Spinner />
     // <Confit />
-    <Dashboard />
+    <>
+    <div>
+    <div>
+      <Dashboard />
+    </div>
+    <div>
+      <Dashboard1 />
+    </div>
+    </div>
+    </>
+    
   );
 };
 
