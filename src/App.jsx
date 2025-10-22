@@ -138,6 +138,7 @@ import Spinner from "./Spinner";
 import Confit from "./Confit";
 import Dashboard from "./Dashboard";
 import Dashboard1 from "./Dashboard1";
+import Dashboard2 from "./Dashboard2";
 import './App.css'
 
 const App = () => {
@@ -163,12 +164,9 @@ const App = () => {
     // <Confit />
     <>
     <div className="Parent">
-      <div className="child1">
-        <Dashboard />
-      </div>
-      <div className="child2">
-        <Dashboard1 />
-      </div>
+      <div className="child1"><Dashboard /></div>
+      <div className="child2"><Dashboard1 /></div>  
+      <div className="child3"><Dashboard2 /></div>  
     </div>
     </>
     

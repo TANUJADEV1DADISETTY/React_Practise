@@ -1,59 +1,57 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { useState } from "react";
+import './Dashboard1.css';
 
 const Dashboard1 = () => {
-const [state, setState] = React.useState({
+  const [state, setState] = React.useState({
           
-            series: [{
-              data: [44, 55, 41, 64, 22, 43, 21]
-            }, {
-              data: [53, 32, 33, 52, 13, 44, 32]
-            }],
+            series: [44, 55, 41, 17, 15],
             options: {
               chart: {
-                type: 'bar',
-                height: 430
+                width: 380,
+                type: 'donut',
               },
               plotOptions: {
-                bar: {
-                  horizontal: true,
-                  dataLabels: {
-                    position: 'top',
-                  },
+                pie: {
+                  startAngle: -90,
+                  endAngle: 270
                 }
               },
               dataLabels: {
-                enabled: true,
-                offsetX: -6,
-                style: {
-                  fontSize: '12px',
-                  colors: ['#fff']
+                enabled: false
+              },
+              fill: {
+                type: 'gradient',
+              },
+              legend: {
+                formatter: function(val, opts) {
+                  return val + " - " + opts.w.globals.series[opts.seriesIndex]
                 }
               },
-              stroke: {
-                show: true,
-                width: 1,
-                colors: ['#fff']
+              title: {
+                text: 'Department_sales'
               },
-              tooltip: {
-                shared: true,
-                intersect: false
-              },
-              xaxis: {
-                categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007],
-              },
+              responsive: [{
+                breakpoint: 480,
+                options: {
+                  chart: {
+                    width: 200
+                  },
+                  legend: {
+                    position: 'bottom'
+                  }
+                }
+              }]
             },
           
           
         });
 
-        
-
         return (
           <div>
-            <div id="chart">
-                <ReactApexChart options={state.options} series={state.series} type="bar" height={430} />
+            <div id="chart1">
+                <div className="area1"><ReactApexChart options={state.options} series={state.series} type="donut" width={380} /></div>
               </div>
             <div id="html-dist"></div>
           </div>

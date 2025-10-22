@@ -1,0 +1,14 @@
+#chart2 {
+    width : 300px;
+}
+.area2 {
+    /* border: 2px solid black; */
+    
+    margin-top: 10px;
+    margin-left: 20px;
+
+    height: 280px;
+    width: 300px;
+    box-shadow: 0px 0px 2px 2px rgb(205, 204, 204);
+    padding-top: 30px;
+}

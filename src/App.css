@@ -44,9 +44,8 @@
   height : 300px;
   width : 30px;
 } */
-.parent {
+.Parent {
   display: flex;
-}
-.child1 {
-  display: inline-block;
+  flex-direction: row;
+  
 }
