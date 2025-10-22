@@ -44,3 +44,9 @@
   height : 300px;
   width : 30px;
 } */
+.parent {
+  display: flex;
+}
+.child1 {
+  display: inline-block;
+}

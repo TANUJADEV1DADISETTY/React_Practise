@@ -138,6 +138,7 @@ import Spinner from "./Spinner";
 import Confit from "./Confit";
 import Dashboard from "./Dashboard";
 import Dashboard1 from "./Dashboard1";
+import './App.css'
 
 const App = () => {
   return (
@@ -161,13 +162,13 @@ const App = () => {
     // <Spinner />
     // <Confit />
     <>
-    <div>
-    <div>
-      <Dashboard />
-    </div>
-    <div>
-      <Dashboard1 />
-    </div>
+    <div className="Parent">
+      <div className="child1">
+        <Dashboard />
+      </div>
+      <div className="child2">
+        <Dashboard1 />
+      </div>
     </div>
     </>
     

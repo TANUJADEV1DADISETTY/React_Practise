@@ -41,7 +41,7 @@ const Dashboard = () => {
   
 
   return (
-    <div>
+    <div className="parent">
             <div id="chart">
                 <div className = "area"><ReactApexChart options={state.options} series={state.series} type="area" height={350} width = {750}/></div>
               </div>
