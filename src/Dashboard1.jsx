@@ -6,12 +6,13 @@ import './Dashboard1.css';
 const Dashboard1 = () => {
   const [state, setState] = React.useState({
           
-            series: [44, 55, 41, 17, 15],
+            series: [210000, 175000, 85000, 65000, 40000],
             options: {
               chart: {
                 width: 380,
                 type: 'donut',
               },
+              labels: ['Electronics', 'Furniture', 'Home Decor', 'Sports', 'Books'],
               plotOptions: {
                 pie: {
                   startAngle: -90,
