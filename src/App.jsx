@@ -140,6 +140,8 @@ import Dashboard from "./Dashboard";
 import Dashboard1 from "./Dashboard1";
 import Dashboard2 from "./Dashboard2";
 import Dashboard3 from "./Dashboard3";
+import Dashboard4 from "./Dashboard4";
+import Header from "./header";
 import './App.css'
 
 const App = () => {
@@ -164,11 +166,13 @@ const App = () => {
     // <Spinner />
     // <Confit />
     <>
+    <Header />
     <div className="Parent">
       <div className="child1"><Dashboard /></div>
       <div className="child2"><Dashboard1 /></div>  
       <div className="child3"><Dashboard2 /></div> 
       <div className="child4"><Dashboard3 /></div> 
+      <div className="child5"><Dashboard4 /></div> 
     </div>
     </>
     
