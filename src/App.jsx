@@ -123,7 +123,7 @@
 
 
 
-
+// Dashboard
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeaderComponent from "./HeaderComponent";
@@ -142,9 +142,30 @@ import Dashboard2 from "./Dashboard2";
 import Dashboard3 from "./Dashboard3";
 import Dashboard4 from "./Dashboard4";
 import Header from "./header";
+import axios from 'axios';
 import './App.css'
 
 const App = () => {
+  const fetchData = () => {
+    axios.get("http://localhost:5000/get-user")
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+  }
+  let data = {
+    name : "Aditya",
+    roll : "999"
+  }
+  const addData =  () => {
+    axios.post("http://localhost:5000/add-user", data)
+    .then((result) => console.log(result.data))
+    .catch((error) => console.log(error));
+  }
+
+  const ediData = () => {
+    axios.put("http://localhost:5000/edit-user", data)
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+  }
   return (
     // Uncomment this part when you want routing
     // <Router>
@@ -166,14 +187,18 @@ const App = () => {
     // <Spinner />
     // <Confit />
     <>
-    <Header />
-    <div className="Parent">
+    <h1>Hello, This is frontend</h1>
+    <button onClick={fetchData}>Fetch Data</button>&nbsp;&nbsp;&nbsp;
+    <button onClick={addData}>Add Data</button>&nbsp;&nbsp;&nbsp;
+    <button onClick = {ediData}>Edit Data</button>
+    {/* <Header /> */}
+    {/* <div className="Parent">
       <div className="child1"><Dashboard /></div>
       <div className="child2"><Dashboard1 /></div>  
       <div className="child3"><Dashboard2 /></div> 
       <div className="child4"><Dashboard3 /></div> 
       <div className="child5"><Dashboard4 /></div> 
-    </div>
+    </div> */}
     </>
     
   );
